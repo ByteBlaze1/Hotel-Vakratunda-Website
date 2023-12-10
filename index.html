@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>HOTEL VAKRATUNDA</h1>
+          <p>Hotel vakratunda welcomes you in heaven of food and lifestyle</p>
+          <button>MORE INFO</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="home1.jpg" alt="" class="slide active" onclick="img('home1.jpg')">
+        <img src="home2.jpg" alt="" class="slide" onclick="img('home2.jpg')">
+        <img src="home3.jpg" alt="" class="slide" onclick="img('home3.jpg')">
+        <img src="home4.jpg" alt="" class="slide" onclick="img('home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adults:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Children:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="SEARCH">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="a1.jpg" alt="" class="image1">
+          <img src="a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+          <h2>Welcome to vakratunda Hotel Resort</h2>
+          <p>At Hotel vakratunda, we pride ourselves on offering a luxurious and comfortable stay for all our guests. Nestled in the heart of , our hotel provides a serene escape amidst the bustling energy of PUNE.Pune is renowned for its rich cultural tapestry, boasting a melting pot of traditions, languages, and customs. Guests staying at Hotel Vakratunda have the opportunity to immerse themselves in this diverse cultural milieu. The city hosts various cultural festivals throughout the year, celebrating music, dance, art, and culinary delights from around the world. Our hotel serves as a gateway to experiencing this vibrant blend of cultures, offering guests a chance to explore and engage with the local community's diverse heritage. </p>
+          <p>Nature's beauty is abundant in the Sant Tukaram Nagar Pimpri, Pune region. Whether it's the breathtaking coastal views, lush greenery of nearby parks and gardens, or majestic mountains framing the horizon, our hotel offers a gateway to the area's natural wonders. Guests can indulge in outdoor activities, such as hiking trails, scenic drives, or simply savoring tranquil moments amidst stunning landscapes. Hotel Vakratunda embraces this natural beauty, providing guests with a serene and picturesque setting to unwind and appreciate the surrounding splendor.</p>
+          <button class="btn1">READ MORE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Our Facilities</h2>
+        <p>At Hotel Vakratunda, we take pride in offering a diverse range of meticulously designed rooms and suites tailored to meet the needs of every guest. Whether it's our cozy standard rooms ideal for solo travelers or our spacious deluxe suites perfect for families or those seeking extra luxury, each space is thoughtfully furnished with modern amenities. Plush bedding, ergonomic workstations, sleek entertainment systems, and elegant decor create a welcoming atmosphere. Our attention to detail ensures a serene retreat for guests, promising a restful and rejuvenating experience throughout their stay. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming pool</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yogo</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & massage</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Boat Tours</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Surfing Lessons</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Conference room</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Diving & smorking</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Private Beach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Rooms $ Suites</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Standard Room</h3>
+            <p> <span>INR</span>7549 <span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Deluxe or Premium Rooms</h3>
+            <p> <span>INR</span>11399 <span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Suites or Villas</h3>
+            <p> <span>INR</span>15799 <span>/per night</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>AT THE HEART OF COMMUNICATION</h5>
+          <h2>People Say</h2>
+        </div>
+
+        <div class="para">
+          <p>"Family-Friendly Haven": "Our family getaway at Hotel Vakratunda was nothing short of amazing. The resort's family-friendly atmosphere made it an ideal destination for kids and adults alike. The kids' club provided endless entertainment, allowing us some relaxing time. The safety measures in place were commendable, and the staff ensured everyone had a wonderful time. Will definitely recommend to friends and family!"</p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>Aniket Ghondge</h5>
+              <h5>INDIA</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Our Restaurant</h2>
+          <p> At Hotel Vakratunda, we understand the importance of culinary independence during your stay. We Provide four types of kitchens , That's why each of our suites is equipped with a fully-functional kitchenette, featuring modern appliances such as a refrigerator, microwave, stovetop, and toaster. Our kitchenettes come fully stocked with essential cookware, utensils, and glassware, allowing you the freedom to whip up a quick snack or prepare a full meal at your leisure. Wake up to the aroma of freshly brewed coffee using our complimentary in-room coffee maker, and unwind in the evening with a soothing cup of tea from the provided kettle. Our kitchenettes also boast a charming dining area, providing the perfect setting to savor your culinary creations in the comfort of your suite. To ensure your stay starts smoothly, we offer a starter kit comprising coffee, tea, sugar, and select pantry items. For those desiring additional culinary experiences, our concierge is available to assist with grocery deliveries or arrange personalized chef services. Enjoy the flexibility and convenience of a home-away-from-home culinary experience at Hotel Vakratunda.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Indian Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>"The Indian kitchen is a vibrant tapestry of flavors, aromas, and traditions that captivate the senses and celebrate culinary diversity. It's a space where spices dance in harmony, infusing each dish with a burst of intricate flavors. From the tantalizing aroma of cumin and coriander to the rich hues of turmeric and saffron, every ingredient tells a story of centuries-old heritage and cultural richness. It's a place where recipes are treasured heirlooms, passed down through generations, preserving the authenticity of regional cuisines. The sizzle of mustard seeds in hot oil, the melody of spices in a simmering curry, and the delicate balance of sweet, savory, and tangy notes in a single bite—this kitchen crafts gastronomic wonders that linger on the palate, inviting you to embark on a culinary journey through India's diverse and sumptuous flavors."
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>"The Mexican kitchen is a symphony of bold and vibrant flavors, a fusion of ancient culinary traditions deeply rooted in history and culture. It's a place where fresh ingredients like chilies, tomatoes, avocados, and corn take center stage, weaving a tapestry of savory delights. The sizzle of meat on a hot grill, the aroma of freshly ground spices, and the rhythmic pounding of a molcajete crafting vibrant salsas—these elements define the heart of Mexican cuisine. From the zesty tang of lime and cilantro to the warmth of roasted peppers and the comforting richness of beans and cheese, every dish reflects the country's diverse heritage and culinary prowess. It's a kitchen where tacos, enchiladas, and tamales are more than just dishes; they're flavorful expressions of Mexico's vibrant soul, inviting all to indulge in a fiesta of taste and tradition."
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Italian Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>"The Italian kitchen is a celebration of simplicity, authenticity, and the art of bringing together the finest ingredients to create exquisite flavors. It's a culinary sanctuary where every meal is a symphony of taste, where fresh herbs like basil, oregano, and rosemary meet ripe tomatoes, artisanal cheeses, and extra-virgin olive oil. The aroma of garlic sizzling in olive oil, the delicate swirl of handmade pasta, and the aroma of wood-fired pizzas in the air—these define the essence of Italian cuisine. From the comforting allure of creamy risottos to the tangy zest of freshly made marinara sauce, each dish reflects the country's rich regional diversity and culinary heritage. The Italian kitchen isn't just about food; it's a way of life—a warm invitation to gather, savor, and share in the joy of simple, yet exquisite, flavors that transport you to the sun-drenched hillsides of Tuscany or the bustling streets of Naples."
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Greek Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>The Greek kitchen is a tapestry of Mediterranean flavors and timeless traditions, resonating with the essence of simplicity and freshness. It's a culinary sanctuary where olive oil, herbs like oregano and thyme, and fresh vegetables reign supreme. The kitchen exudes a sense of warmth and hospitality, often adorned with whitewashed walls, blue accents reminiscent of the Aegean Sea, and natural elements like wood and stone. Greek kitchens boast simplicity in design and functionality, featuring open spaces for communal cooking and family gatherings. From the irresistible aroma of grilled meats to the tangy zest of feta cheese and the savory comfort of moussaka, each dish reflects a rich cultural heritage passed down through generations. Greek kitchens evoke a sense of conviviality, where the act of sharing a meal becomes an invitation to embrace the pleasures of life, love, and genuine hospitality in every flavorful bite.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Hotel</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW GALLERY</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d120976.60597935958!2d73.7921444!3d18.640695150000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1701875154891!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> we make payment effortless with widely accepted methods. Choose from Visa, Mastercard, American Express, or PayPal for secure transactions. Your convenience matters, and we ensure a seamless payment experience tailored to your preferences, ensuring satisfaction at every step."
+        </p>
+
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+          <li>Our Secret Island Boat Tour Is Just for You</li>
+          <li>Chill and Escape in Our Natural Shelters</li>
+          <li>September in Vakratunda Hotel</li>
+          <li>Live Music Concerts at Hotel Vakratunda</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About Hotel Vakratunda</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>Sant Tukaram Nagar Pimpri , Pune 411018</li>
+          <li><i class="far fa-envelope"></i>gaikwaddigvijay36@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>7755448833 </li>
+          <li><i class="far fa-phone-alt"></i>9936442512 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
